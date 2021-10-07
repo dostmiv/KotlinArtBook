@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <EditText
+        android:id="@+id/artText"
+        android:layout_width="165dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Art Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/painterName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/painterName"
+        android:layout_width="173dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Painter Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/artText" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="336dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="29dp"
+        android:onClick="selectImage"
+        app:layout_constraintBottom_toTopOf="@+id/artText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/selectedimage" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="142dp"
+        android:onClick="save"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/painterName" />
+</androidx.constraintlayout.widget.ConstraintLayout>
